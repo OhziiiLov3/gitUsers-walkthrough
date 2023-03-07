@@ -1,0 +1,48 @@
+<%- include("./partials/head") %>
+
+
+    <%- include(("./partials/header")) %>
+        <div class="d-flex h-100 text-center text-bg-dark">
+            <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+
+                <div>
+                    <h1 class="float-md-start mb-0"> Repos...</h1>
+                </div>
+
+
+                <main class=" my-2 px-3">
+                    <div class="container">
+                        <p class="lead">
+                            Welcome to our Github Api. This is where all of the cool devs hang out.
+                        </p>
+                        <p class="lead">
+                            <a href="/gitUsers"
+                                class="btn btn-lg btn-primary fw-bold border-white bg-dark my-2 p-2">View All Repos</a>
+                        </p>
+                        <img class="img-fluid h-25 w-25" src="https://lthub.ubc.ca/files/2021/06/GitHub-Logo.png"
+                            alt="">
+                        <div class="row my-2 py-3 d-flex justify-content-center">
+                            <div class="col-xs-6 col-xs-offset-6">
+                                <form action="/gitUsers" method="GET">
+                                    <div class="input-group">
+                                        <input type="text" name="username" class="form-control"
+                                            placeholder="Enter a GitHub Username">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-success" type="submit">Go!</button>
+                                        </span>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <hr>
+                </main>
+
+
+
+                <%- include("./partials/footer") %>
+            </div>
+        </div>
+
+
+
+
