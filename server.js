@@ -3,6 +3,7 @@ const app = express()
 
 require("dotenv").config()
 
+const gitUsersController = require('./controllers/gitUsers')
 
 app.set("view engine", "ejs")
 
@@ -25,6 +26,8 @@ app.get('/',(req,res)=>{
      res.render("home.ejs")
 })
 
+
+app.use('/gitUsers',gitUsersController)
 
 
 // All Error Handleing Route

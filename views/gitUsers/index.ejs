@@ -1,0 +1,32 @@
+<%- include("../partials/head") %>
+    <%- include("../partials/header") %>
+        <h1>All Repos</h1>
+        <a class="btn btn-info" href="/">Go Back</a>
+        <div class="container text-center">
+            <h1>
+                <%= userData.login %>
+            </h1>
+            <h2>
+                <%= userData.name %>
+            </h2>
+            <div class="row align-items-center">
+                <div class="col my-2 py-3 d-flex justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <img style="height: 35vh;" src=<%=userData.avatar_url%> alt"">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <%= userData.login %>
+                            </h5>
+                            <p> Location: <%= userData.location %>
+                            </p>
+                            <p class="card-text">Bio:<%= userData.bio %>
+                            </p>
+                            <a href="#" class="btn btn-primary">See Repo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <%- include("../partials/footer") %>
+            </footer>
+        </div>
